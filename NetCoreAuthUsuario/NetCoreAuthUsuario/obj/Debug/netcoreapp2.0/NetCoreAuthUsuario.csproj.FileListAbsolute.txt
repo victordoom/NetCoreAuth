@@ -10,3 +10,15 @@ C:\Users\CDS1UNIVO27\source\repos\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debu
 C:\Users\CDS1UNIVO27\source\repos\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.AssemblyInfo.cs
 C:\Users\CDS1UNIVO27\source\repos\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.dll
 C:\Users\CDS1UNIVO27\source\repos\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.pdb
+C:\Users\CDS1UNIVO27\source\repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\bin\Debug\netcoreapp2.0\NetCoreAuthUsuario.deps.json
+C:\Users\CDS1UNIVO27\source\repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\bin\Debug\netcoreapp2.0\NetCoreAuthUsuario.runtimeconfig.json
+C:\Users\CDS1UNIVO27\source\repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\bin\Debug\netcoreapp2.0\NetCoreAuthUsuario.runtimeconfig.dev.json
+C:\Users\CDS1UNIVO27\source\repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\bin\Debug\netcoreapp2.0\NetCoreAuthUsuario.dll
+C:\Users\CDS1UNIVO27\source\repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\bin\Debug\netcoreapp2.0\NetCoreAuthUsuario.pdb
+C:\Users\CDS1UNIVO27\source\repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.csprojAssemblyReference.cache
+C:\Users\CDS1UNIVO27\source\repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.csproj.CoreCompileInputs.cache
+C:\Users\CDS1UNIVO27\source\repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\CDS1UNIVO27\source\repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.AssemblyInfoInputs.cache
+C:\Users\CDS1UNIVO27\source\repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.AssemblyInfo.cs
+C:\Users\CDS1UNIVO27\source\repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.dll
+C:\Users\CDS1UNIVO27\source\repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.pdb
