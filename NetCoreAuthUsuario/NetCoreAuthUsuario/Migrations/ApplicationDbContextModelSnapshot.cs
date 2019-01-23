@@ -8,13 +8,12 @@ using Microsoft.EntityFrameworkCore.Storage.Internal;
 using NetCoreAuthUsuario.Data;
 using System;
 
-namespace NetCoreAuthUsuario.Data.Migrations
+namespace NetCoreAuthUsuario.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190123150123_FirstName")]
-    partial class FirstName
+    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -143,8 +142,6 @@ namespace NetCoreAuthUsuario.Data.Migrations
                         .HasMaxLength(256);
 
                     b.Property<bool>("EmailConfirmed");
-
-                    b.Property<string>("FirstName");
 
                     b.Property<bool>("LockoutEnabled");
 
