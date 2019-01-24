@@ -21,3 +21,4 @@ C:\Users\CDS1UNIVO27\source\repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsua
 C:\Users\CDS1UNIVO27\source\repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.AssemblyInfo.cs
 C:\Users\CDS1UNIVO27\source\repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.dll
 C:\Users\CDS1UNIVO27\source\repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.pdb
+C:\Users\CDS1UNIVO27\source\repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.csprojAssemblyReference.cache

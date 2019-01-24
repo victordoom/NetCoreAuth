@@ -65,7 +65,7 @@ function editarUsuario(action) {
         normalizedUserName = val.normalizedUserName;
         normalizedEmail = val.normalizedEmail;
         passwordHash = val.passwordHash;
-        phoneNumber = val.phoneNumber;
+       
         securityStamp = val.securityStamp;
         twoFactorEnabled = val.twoFactorEnabled;
     });
