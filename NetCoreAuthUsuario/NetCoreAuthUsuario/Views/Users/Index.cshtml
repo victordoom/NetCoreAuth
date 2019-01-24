@@ -1,4 +1,4 @@
-﻿@model IEnumerable<NetCoreAuthUsuario.Models.ApplicationUser>
+﻿@model IEnumerable<NetCoreAuthUsuario.Models.Usuario>
 
 @{
     ViewData["Title"] = "Usuarios";
@@ -15,6 +15,9 @@
             <th>
                 Usuario
             </th>
+            <th>
+                Rol
+            </th>
 
             <th>
                 Email
@@ -30,25 +33,28 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.UserName)
-                </td>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Role)
+            </td>
 
-                <td>
-                    @Html.DisplayFor(modelItem => item.Email)
-                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
 
-                <td>
-                    @Html.DisplayFor(modelItem => item.PhoneNumber)
-                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
 
-                <td>
-                    <a class="btn btn-success" data-toggle="modal" data-target="#modalEditar" onclick="getUsuario('@item.Id','Users/GetUsuario')">Editar</a> |
-                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
-                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
-                </td>
-            </tr>
+            <td>
+                <a class="btn btn-success" data-toggle="modal" data-target="#modalEditar" onclick="getUsuario('@item.Id','Users/GetUsuario')">Editar</a> |
+                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+            </td>
+        </tr>
         }
     </tbody>
 </table>
@@ -64,31 +70,39 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form >
+                <form>
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <input type="hidden" name="Id" id="Id" />
                     <div class="form-group">
                         <label for="UserName" class="control-label">Usuario</label>
                         <input readonly name="UserName" id="UserName" class="form-control" />
-                        
+
                     </div>
-                   
+
+                    <div class="form-group">
+                        <label for="Roles" class="control-label">Roles</label>
+                        <select id="Select" name="Select" class="form-control" onclick="getRoles('Users/GetRoles')">
+                            <option value="0">Selecione un rol</option>
+                        </select>
+
+                    </div>
+
                     <div class="form-group">
                         <label for="Email" class="control-label">Email</label>
                         <input name="Email" id="Email" class="form-control" />
-                        
+
                     </div>
-                   
+
                     <div class="form-group">
                         <label for="PhoneNumber" class="control-label">Telefono</label>
                         <input name="PhoneNumber" id="PhoneNumber" class="form-control" />
-                       
+
                     </div>
-                   
-                    
-                   
-                   
-                    
+
+
+
+
+
                 </form>
             </div>
             <div class="modal-footer">
