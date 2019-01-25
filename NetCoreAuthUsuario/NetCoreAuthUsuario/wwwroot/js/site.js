@@ -55,6 +55,17 @@ function mostrarUsuario(response) {
         $('input[name=Email]').val(val.email);
         $('input[name=PhoneNumber]').val(val.phoneNumber);
         document.getElementById('Select').options[0] = new Option(val.role, val.roleId);
+
+        //mostar los detalles del usuario
+        $("#dEmail").text(val.email);
+        $("#dUserName").text(val.userName);
+        $("#dPhoneNumber").text(val.phoneNumber);
+        $("#dRole").text(val.role);
+
+        //mostar los datos del usuario que deseo eliminar
+        $("#eUsuario").text(val.email);
+        $('input[name=EIdUsuario]').val(val.id);
+
     });
 
 }
@@ -68,6 +79,7 @@ function getRoles(action) {
             if (j==0) {
                 for (var i = 0; i < response.length; i++) {
                     document.getElementById('Select').options[i] = new Option(response[i].text, response[i].value);
+                    document.getElementById('SelectNuevo').options[i] = new Option(response[i].text, response[i].value);
                 }
                 j = 1;
             }
@@ -116,4 +128,65 @@ function editarUsuario(action) {
             }
         }
     });
+}
+
+function ocultarDetalleUsuario() {
+    $("#modalDetalle").modal("hide");
+}
+
+function eliminarUsuario(action) {
+    var id = $('input[name=EIdUsuario]')[0].value;
+    $.ajax({
+        type: "POST",
+        url: action,
+        data: { id },
+        success: function (response) {
+            if (response === "Delete") {
+                window.location.href = "Users";
+            }
+            else {
+                alert("No se puede eliminar el registro");
+            }
+        }
+    });
+}
+
+function crearUsuario(action) {
+    //obtener los datos ingresados en los input respectivos
+    email = $('input[name=EmailNuevo]')[0].value;
+    phoneNumber = $('input[name=PhoneNumberNuevo]')[0].value;
+    passwordHash = $('input[name=PasswordHashNuevo]')[0].value;
+    role = document.getElementById('SelectNuevo');
+    selectRole = role.options[role.selectedIndex].text;
+
+    //vamos a validar que los datos del ususario no esten vacios
+    if (email == "") {
+        $('#EmailNuevo').focus();
+        alert("Ingrese el email del usuario");
+    }
+    else {
+        if (passwordHash == "") {
+            $('#PasswordHashNuevo').focus();
+            alert("Ingrese el password del usuario");
+        }
+        else {
+            $.ajax({
+                type: "POST",
+                url: action,
+                data: {
+                    email, phoneNumber, passwordHash, selectRole
+                },
+                success: function (response) {
+                    if (response === "Save") {
+                        window.location.href = "Users";
+                    }
+                    else {
+                        $('#mensajenuevo').html("No se pudo guardar el usuario. <br/>Selecione un rol. <br/>Ingrese un Email correcto. <br/>El password debe tener de 6-100 carateres, al menos un caracter especial, una letra mayuscula y un numero");
+
+                    }
+                }
+            });
+        }
+    }
+
 }

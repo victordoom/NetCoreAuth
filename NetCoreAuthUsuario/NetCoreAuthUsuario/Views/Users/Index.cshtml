@@ -7,7 +7,7 @@
 <h2>Usuarios</h2>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-primary" data-toggle="modal" data-target="#modalAgregar">Agregar</a>
 </p>
 <table class="table">
     <thead>
@@ -33,28 +33,28 @@
     <tbody>
         @foreach (var item in Model)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Role)
-            </td>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Role)
+                </td>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.PhoneNumber)
-            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+                </td>
 
-            <td>
-                <a class="btn btn-success" data-toggle="modal" data-target="#modalEditar" onclick="getUsuario('@item.Id','Users/GetUsuario')">Editar</a> |
-                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
-                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
-            </td>
-        </tr>
+                <td>
+                    <a class="btn btn-success" data-toggle="modal" data-target="#modalEditar" onclick="getUsuario('@item.Id','Users/GetUsuario')">Editar</a> |
+                    <a class="btn btn-info" onclick="getUsuario('@item.Id','Users/GetUsuario')" data-toggle="modal" data-target="#modalDetalle">Detalles</a> |
+                    <a class="btn btn-danger" data-toggle="modal" data-target="#modalEliminar" onclick="getUsuario('@item.Id','Users/GetUsuario')">Eliminar</a>
+                </td>
+            </tr>
         }
     </tbody>
 </table>
@@ -108,6 +108,134 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                 <button type="button" class="btn btn-primary" onclick="editarUsuario('Users/EditUsuario')">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalDetalle" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Detalles del Usuario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="UserName" class="control-label">Usuario</label>
+                    <p id="dUserName">Usuario 1</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="Roles" class="control-label">Roles</label>
+                    <p id="dRole">Role</p>
+
+
+                </div>
+
+                <div class="form-group">
+                    <label for="Email" class="control-label">Email</label>
+                    <p id="dEmail">Email 1</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="PhoneNumber" class="control-label">Telefono</label>
+                    <p id="dPhoneNumber">Telefono 1</p>
+                </div>
+
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-success" data-target="#modalEditar" data-toggle="modal" onclick="ocultarDetalleUsuario()">Editar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Esta seguro de eliminar el usuario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <h3 id="eUsuario"></h3>
+                <input type="hidden" name="EIdUsuario" id="EIdUsuario">
+
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-danger" onclick="eliminarUsuario('Users/DeleteUsuario')">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalAgregar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar Usuario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+
+
+
+                    <div class="form-group">
+                        <label for="Roles" class="control-label">Roles</label>
+                        <select id="SelectNuevo" name="SelectNuevo" class="form-control" onclick="getRoles('Users/GetRoles')">
+                            <option value="0">Selecione un rol</option>
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="EmailNuevo" class="control-label">Email</label>
+                        <input name="EmailNuevo" id="EmailNuevo" class="form-control" />
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="PhoneNumberNuevo" class="control-label">Telefono</label>
+                        <input name="PhoneNumberNuevo" id="PhoneNumberNuevo" class="form-control" />
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="PasswordHashNuevo" class="control-label">Password</label>
+                        <input type="password" name="PasswordHashNuevo" id="PasswordHashNuevo" class="form-control" />
+
+                    </div>
+                    <div class="form-group">
+                        <p id="mensajenuevo"></p>
+                    </div>
+
+
+
+
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" onclick="crearUsuario('Users/CreateUsuario')">Guardar</button>
             </div>
         </div>
     </div>

@@ -163,6 +163,50 @@ namespace NetCoreAuthUsuario.Controllers
 
         }
 
+        public async Task<string> DeleteUsuario(string id)
+        {
+            var resp = "";
+            try
+            {
+                var applicationUser = await _context.ApplicationUser.SingleOrDefaultAsync(m => m.Id == id);
+                _context.ApplicationUser.Remove(applicationUser);
+                await _context.SaveChangesAsync();
+                resp = "Delete";
+            }
+            catch
+            {
+                resp = "NoDelete";
+                throw;
+            }
+            return resp;
+        }
+
+        public async Task<string> CreateUsuario(string email,
+            string phoneNumber, string passwordHash,
+            string selectRole, ApplicationUser applicationUser)
+        {
+            var resp = "";
+            applicationUser = new ApplicationUser
+            {
+                UserName = email,
+                Email = email,
+                PhoneNumber = phoneNumber
+            };
+
+            var result = await _userManager.CreateAsync(applicationUser, passwordHash);
+            if (result.Succeeded)
+            {
+                await _userManager.AddToRoleAsync(applicationUser, selectRole);
+                resp = "Save";
+            }
+            else
+            {
+                resp = "NoSave";
+            }
+
+            return resp;
+        }
+
         private bool ApplicationUserExists(string id)
         {
             return _context.ApplicationUser.Any(e => e.Id == id);
