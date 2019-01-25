@@ -26,5 +26,7 @@ namespace NetCoreAuthUsuario.Data
         }
 
         public DbSet<NetCoreAuthUsuario.Models.ApplicationUser> ApplicationUser { get; set; }
+
+        public DbSet<NetCoreAuthUsuario.Models.Categoria> Categoria { get; set; }
     }
 }
