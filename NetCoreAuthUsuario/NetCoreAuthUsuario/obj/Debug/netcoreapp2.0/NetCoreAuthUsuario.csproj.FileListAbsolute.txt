@@ -22,3 +22,15 @@ C:\Users\CDS1UNIVO27\source\repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsua
 C:\Users\CDS1UNIVO27\source\repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.dll
 C:\Users\CDS1UNIVO27\source\repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.pdb
 C:\Users\CDS1UNIVO27\source\repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.csprojAssemblyReference.cache
+C:\Users\Xamarin\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\bin\Debug\netcoreapp2.0\NetCoreAuthUsuario.deps.json
+C:\Users\Xamarin\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\bin\Debug\netcoreapp2.0\NetCoreAuthUsuario.runtimeconfig.json
+C:\Users\Xamarin\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\bin\Debug\netcoreapp2.0\NetCoreAuthUsuario.runtimeconfig.dev.json
+C:\Users\Xamarin\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\bin\Debug\netcoreapp2.0\NetCoreAuthUsuario.dll
+C:\Users\Xamarin\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\bin\Debug\netcoreapp2.0\NetCoreAuthUsuario.pdb
+C:\Users\Xamarin\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.csprojAssemblyReference.cache
+C:\Users\Xamarin\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.csproj.CoreCompileInputs.cache
+C:\Users\Xamarin\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Xamarin\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.AssemblyInfoInputs.cache
+C:\Users\Xamarin\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.AssemblyInfo.cs
+C:\Users\Xamarin\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.dll
+C:\Users\Xamarin\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.pdb

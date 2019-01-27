@@ -2,6 +2,9 @@
 $('#modalEditar').on('shown.bs.modal', function () {
     $('#myInput').trigger('focus');
 });
+$('#modalAC').on('shown.bs.modal', function () {
+    $('#Nombre').trigger('focus');
+});
 
 function getUsuario(id, action) {
     $.ajax({
@@ -189,4 +192,28 @@ function crearUsuario(action) {
         }
     }
 
+}
+
+//funcion cada que se carga nuestra vista index
+$().ready(() => {
+    document.getElementById("filtrar").focus();
+    filtrarDatos(1);
+});
+
+//obtener los datos de los campos de categoria
+function agregarCategoria() {
+    var nombre = document.getElementById("Nombre").value;
+    var descripcion = document.getElementById("Descripcion").value;
+    var estados = document.getElementById("Estado").value;
+    var estado = document.options[estados.selectedIndex].value;
+    var action = 'Categorias/guardarCategoria';
+    var categoria = new Categorias(nombre, descripcion, estado, action);
+    categoria.agregarCategoria();
+}
+
+var filtrarDatos = (numPagina) => {
+    var valor = document.getElementById("filtrar").value;
+    var action = 'Categorias/filtrarDatos';
+    var categoria = new Categorias(valor, "", "", action);
+    categoria.filtrarDatos(numPagina);
 }
