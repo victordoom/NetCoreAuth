@@ -34,3 +34,15 @@ C:\Users\Xamarin\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\
 C:\Users\Xamarin\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.AssemblyInfo.cs
 C:\Users\Xamarin\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.dll
 C:\Users\Xamarin\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.pdb
+C:\Users\Cesia Fuentes\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\bin\Debug\netcoreapp2.0\NetCoreAuthUsuario.deps.json
+C:\Users\Cesia Fuentes\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\bin\Debug\netcoreapp2.0\NetCoreAuthUsuario.runtimeconfig.json
+C:\Users\Cesia Fuentes\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\bin\Debug\netcoreapp2.0\NetCoreAuthUsuario.runtimeconfig.dev.json
+C:\Users\Cesia Fuentes\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\bin\Debug\netcoreapp2.0\NetCoreAuthUsuario.dll
+C:\Users\Cesia Fuentes\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\bin\Debug\netcoreapp2.0\NetCoreAuthUsuario.pdb
+C:\Users\Cesia Fuentes\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.csproj.CoreCompileInputs.cache
+C:\Users\Cesia Fuentes\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Cesia Fuentes\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.AssemblyInfoInputs.cache
+C:\Users\Cesia Fuentes\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.AssemblyInfo.cs
+C:\Users\Cesia Fuentes\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.dll
+C:\Users\Cesia Fuentes\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.pdb
+C:\Users\Cesia Fuentes\Source\Repos\NetCoreAuth\NetCoreAuthUsuario\NetCoreAuthUsuario\obj\Debug\netcoreapp2.0\NetCoreAuthUsuario.csprojAssemblyReference.cache

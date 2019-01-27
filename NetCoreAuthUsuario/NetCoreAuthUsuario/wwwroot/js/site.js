@@ -201,12 +201,15 @@ $().ready(() => {
 });
 
 //obtener los datos de los campos de categoria
-function agregarCategoria() {
-    var nombre = document.getElementById("Nombre").value;
-    var descripcion = document.getElementById("Descripcion").value;
-    var estados = document.getElementById("Estado").value;
-    var estado = document.options[estados.selectedIndex].value;
-    var action = 'Categorias/guardarCategoria';
+function agregarCategoria(action) {
+    var nombre = $('input[name=Nombre]')[0].value
+    var descripcion = $('input[name=Descripcion]')[0].value
+    var estado = document.getElementById('Estado').value;
+ //   var estado = document.options[estados.selectedIndex].text;
+  //  var action = action
+
+
+
     var categoria = new Categorias(nombre, descripcion, estado, action);
     categoria.agregarCategoria();
 }
