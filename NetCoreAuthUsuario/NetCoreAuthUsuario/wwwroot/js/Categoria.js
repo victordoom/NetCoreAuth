@@ -1,74 +1,80 @@
-﻿//ahora se puede crear clases en java scrip
-class Categorias {
-    constructor(nombre, descripcion, estado, action) {
-        this.nombre = nombre;
-        this.descripcion = descripcion;
-        this.estado = estado;
-        this.action = action;
-    }
-    //metodo
-    agregarCategoria() {
-        if (this.nombre == "") {
-            document.getElementById("Nombre").focus();
-        }
-        else {
-            if (this.descripcion == "") {
-                document.getElementById("Descripcion").focus();
+﻿
+//funcion cada que se carga nuestra vista index
+$().ready(function () {
+    document.getElementById("filtrar").focus();
+    filtrarDatos(1);
+});
+
+//obtener los datos de los campos de categoria
+function agregarCategoria(action) {
+    var nombre = $('input[name=Nombre]')[0].value
+    var descripcion = $('input[name=Descripcion]')[0].value
+    var estado = document.getElementById('Estado').value;
+    var mensaje;
+
+    if (nombre == "") {
+        $('#Nombre').focus();
+    } else {
+        if (descripcion == "") {
+            $('#Descripcion').focus();
+        } else {
+            if (estado == "0") {
+                $('#mensaje').html("Seleccione un estado");
             } else {
-                if (this.estado == "0") {
-                    document.getElementById("mensaje").innerHTML = "Selecione un estado";
-                } else {
-                   
-                    var nombre = this.nombre;
-                    var descripcion = this.descripcion;
-                    var estado = this.estado;
-                    var action = this.action;
-                    var mensaje = '';
 
-                    $.ajax({
-                        type: "POST",
-                        url: action,
-                        data: {
-                            nombre, descripcion, estado
-                        },
-                        success: (response) => {
-                            $.each(response, (index, val) => {
-                                mensaje = val.code;
-                            });
 
-                            if (mensaje === "Save") {
-                                this.restablecer();
-                            } else {
-                                document.getElementById("mensaje").innerHTML = "No se pudo guardar la categoria";
-                            }
+                $.ajax({
+                    type: "POST",
+                    url: action,
+                    data: {
+                        nombre, descripcion, estado
+                    },
+                    success: function (response) {
+                        $.each(response, function (index, val) {
+                            mensaje = val.code;
+                        });
+
+                        if (mensaje === "Save") {
+                            window.location.href = "Categorias";
+                        } else {
+                            document.getElementById("mensaje").innerHTML = "No se pudo guardar la categoria";
                         }
-                    });
-                }
+                    }
+                });
             }
         }
+    }
 
-        filtrarDatos(numPagina){
-            var valor = this.nombre;
-            var action = this.action;
-            if (valor == "") {
-                valor = "null";
-            }
-            $.ajax({
-                type: "POST",
-                url: action,
-                data: { valor, numPagina },
-                success:  (response) => {
-                    console.log(response);
-                    $.each(response, (index, val) => {
 
-                        $("#resultSearch").html(val[0]);
-                        $("#paginado").html(val[1]);
-                    });
-                }
+    //var categoria = new Categorias(nombre, descripcion, estado, action);
+    //categoria.agregarCategoria();
+}
+
+function filtrarDatos(numPagina) {
+    var valor = $('input[name=filtrar]')[0].value;
+    var action = 'Categorias/filtrarDatos';
+    
+
+    if (valor == "") {
+        valor = "null";
+    }
+    $.ajax({
+        type: "POST",
+        url: action,
+        data: { valor, numPagina },
+        success: function (response) {
+            console.log(response);
+            $.each(response, function (index, val) {
+
+                $("#resultSearch").html(val[0]);
+                $("#paginado").html(val[1]);
             });
         }
+    });
+}
 
-        restablecer(){
+
+        function restablecer() {
             //se limpia los input
             document.getElementById("Nombre").value = "";
             document.getElementById("Descripcion").value = "";
@@ -78,5 +84,3 @@ class Categorias {
             $('modalAC').modal('hide');
 
         }
-    }
-}
